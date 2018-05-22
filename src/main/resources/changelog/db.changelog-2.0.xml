@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="AEV" id="insert-first">
+        <insert tableName="user">
+            <column name="user_id" type="bigint">
+                <constraints primaryKey="true" nullable="false" /> 10 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="char(1)"> w </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-map project-version="2.0">
+    <query name="addUsers" factory="org.apache.cayenne.map.SQLTemplateBuilder">
+        <property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+        <sql>
+            <![CDATA[
+            #foreach ($user in $listUsers)
+insert into user (user_id, login, password, first_name, last_name, gender, birth_date, description) values ($user.getUserId(),'$user.getLogin()','$user.getPassword()','$user.getFirstName()','$user.getLastName()','$user.getGender()','$user.getDate()','$user.getDescription()');
+#end]]>
+        </sql>
+    </query>
+    <query name="deleteUsers" factory="org.apache.cayenne.map.SQLTemplateBuilder">
+        <property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+        <sql>
+            <![CDATA[
+            delete from user where user_id in (#bind($paramList 'NUMERIC'))
+           ]]>
+        </sql>
+    </query>
+
+    <query name="searchByParameters" factory="org.apache.cayenne.map.SQLTemplateBuilder">
+        <property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+        <sql>
+            <![CDATA[select * from user
+            #chain('and' 'where')
+                #chunk($login)
+                      login = #bind($login 'VARCHAR')
+                #end
+                #chunk($first_name)
+                    first_name = #bind($first_name 'VARCHAR')
+                #end
+                #chunk($last_name)
+                    last_name = #bind($last_name 'VARCHAR')
+                #end
+            #end]]>
+        </sql>
+    </query>
+    <query name="isUser" factory="org.apache.cayenne.map.SQLTemplateBuilder">
+        <property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+        <sql>
+            <![CDATA[select count(*) from user where user_id = #bind($user_id)]]>
+        </sql>
+    </query>
+
+    <query name="getCountUsers" factory="org.apache.cayenne.map.SQLTemplateBuilder">
+        <property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+        <sql>
+            <![CDATA[select count(*) from user]]>
+        </sql>
+    </query>
+</data-map>

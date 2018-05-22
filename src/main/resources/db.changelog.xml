@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="create-table" author="AEV">
+        <preConditions onFail="WARN">
+            <not>
+                <tableExists tableName="user"/>
+            </not>
+        </preConditions>
+        <createTable tableName="user">
+            <column name="user_id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="login" type="varchar(10)"/>
+            <column name="password" type="varchar(8)"/>
+            <column name="first_name" type="varchar(50)"/>
+            <column name="last_name" type="varchar(50)"/>
+            <column name="gender" type="char(6)"/>
+            <column name="birth_date" type="date"/>
+            <column name="description" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="AEV" id="insert-10">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 10 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> w </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-9">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 9 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> female </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-8">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 8 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> female </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-7">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 7 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> female </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-6">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 6 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> female </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-5">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 5 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> female </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-4">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 4 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> female </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-3">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 3 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> male </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-2">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 2 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> male </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+    <changeSet author="AEV" id="insert-1">
+        <insert tableName="user">
+            <column name="user_id" type="int">
+                <constraints primaryKey="true" nullable="false" /> 1 </column>
+            <column name="login" type="varchar(10)"> user </column>
+            <column name="password" type="varchar(8)"> user </column>
+            <column name="first_name" type="varchar(50)">user</column>
+            <column name="last_name" type="varchar(50)"> user </column>
+            <column name="gender" type="varchar(6)"> male </column>
+            <column name="birth_date" type="date"> 2009-10-10 </column>
+            <column name="description" type="varchar(255)"> abc </column>
+        </insert>
+    </changeSet>
+
+    <!--<changeSet author="evkosyrev" id="alter table adress">-->
+        <!--<preConditions onFail="WARN">-->
+                <!--<tableExists tableName="user"/>-->
+                <!--<not><columnExists columnName="address" tableName="user"/></not>-->
+        <!--</preConditions>-->
+        <!--<addColumn  tableName="user">-->
+            <!--<column name="address" type="varchar(255)"/>-->
+        <!--</addColumn>-->
+    <!--</changeSet>-->
+</databaseChangeLog>

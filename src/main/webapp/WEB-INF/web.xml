@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app>
+    <listener>
+        <listener-class>
+            com.aev.listener.AppContextListener
+        </listener-class>
+    </listener>
+
+
+
+
+    <!--http servlets-->
+    <servlet>
+        <servlet-name>GetUsersServlet</servlet-name>
+        <servlet-class>com.aev.web.servlet.GetUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetUsersServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddUsersServlet</servlet-name>
+        <servlet-class>com.aev.web.servlet.AddUsersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddUsersServlet</servlet-name>
+        <url-pattern>/users/add</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteUsersServlet</servlet-name>
+        <servlet-class>com.aev.web.servlet.DeleteUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteUsersServlet</servlet-name>
+        <url-pattern>/users/delete</url-pattern>
+    </servlet-mapping>
+
+    <!--<listener>-->
+        <!--<listener-class>-->
+            <!--com.sun.xml.ws.transport.http.servlet.WSServletContextListener-->
+        <!--</listener-class>-->
+    <!--</listener>-->
+    <!--<servlet>-->
+        <!--<servlet-name>hello</servlet-name>-->
+        <!--<servlet-class>-->
+            <!--com.sun.xml.ws.transport.http.servlet.WSServlet-->
+        <!--</servlet-class>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>hello</servlet-name>-->
+        <!--<url-pattern>/services</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<session-config>-->
+        <!--<session-timeout>120</session-timeout>-->
+    <!--</session-config>-->
+</web-app>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain project-version="1">
+    <property name="cayenne.DataDomain.usingExternalTransactions" value="false"/>
+
+    <node name="jdbc:h2:mem:test" factory="org.apache.cayenne.configuration.server.XMLPoolingDataSourceFactory" schema-update-strategy="org.apache.cayenne.access.dbsync.CreateIfNoSchemaStrategy">
+        <data-source>
+            <driver value="org.h2.Driver"/>
+            <url value="jdbc:h2:mem:test"/>
+            <connectionPool min="1" max="30"/>
+            <login userName="SA" password=""/>
+        </data-source>
+    </node>
+    <map name="User" />
+    <map name="CreateTable" />
+</domain>

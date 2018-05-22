@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+#foreach ($user in $listUsers)
+    <user>
+        <user_id>$user.getUserId()</user_id>
+        <login>$user.getLogin()</login>
+        <password>$user.getPassword()</password>
+        <first_name>$user.getFirstName()</first_name>
+        <last_name>$user.getLastName()</last_name>
+        <gender>$user.getGender()</gender>
+        <birth_date>$user.getDate()</birth_date>
+        <description>$user.getDescription()</description>
+    </user>
+#end
+</users>

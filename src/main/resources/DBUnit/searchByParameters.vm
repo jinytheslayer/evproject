@@ -1,0 +1,7 @@
+SELECT * FROM USERTEST#set ($choise = "WHERE")
+#set ($keys = $paramMap.keySet() )
+#foreach ($key in $keys )
+    #if($paramMap.get($key))
+        $choise $key = '$paramMap.get($key)'#set ($choise = "AND")
+    #end
+#end

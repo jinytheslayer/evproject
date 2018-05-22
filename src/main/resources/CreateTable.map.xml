@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-map project-version="2.0">
+    <query name="createTable" factory="org.apache.cayenne.map.SQLTemplateBuilder">
+        <property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+        <sql>
+            <![CDATA[
+            DROP TABLE IF EXISTS user;
+            CREATE TABLE user (
+                    user_id INT NOT NULL PRIMARY KEY,
+                    login VARCHAR(10),
+                    password VARCHAR(8),
+                    first_name VARCHAR(50),
+                    last_name VARCHAR(50),
+                    gender CHAR(1),
+                    birth_date DATE,
+                    description VARCHAR(255)
+                  )
+          ]]>
+        </sql>
+    </query>
+    <query name="insertUsers" factory="org.apache.cayenne.map.SQLTemplateBuilder">
+        <property name="cayenne.GenericSelectQuery.fetchingDataRows" value="true"/>
+        <sql>
+            <![CDATA[
+            #foreach ($id in $users_id)
+insert into user (user_id, login, password, first_name, last_name, gender, birth_date, description) values ($id,'jiny','qwerty','Roman','Volhov','m','1993-04-20','mudachelo');
+#end
+           ]]>
+        </sql>
+    </query>
+</data-map>
